@@ -13,15 +13,25 @@ if [ "$answer" != "${answer#[Yy]}" ]; then
     yes "" | apt update
     yes "" | apt install neofetch htop
     yes "" | apt install nodejs
-    yes "" | apt npm
-    yes "" | apt nginx
+    yes "" | apt install npm
+    yes "" | apt install nginx
     yes "" | apt install curl
-    
+    sudo rm -r /etc/nginx/sites-available/
+    curl  https://raw.githubusercontent.com/rafia9005/auto-setup-server/main/default -o default
+    mv default /etc/nginx/sites-available/
+    service nginx restart
     curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
     npm i -g pm2
     pm2 start "filebrowser -a 0.0.0.0 -p 2222 -r /"
+    echo "---------------------------------------"
+    echo "| Filebrowser run in : 127.0.0.0:2222 |"
+    echo "---------------------------------------"
     echo ""
+    echo "---------------------------------------"
+    echo "| Nginx run in : 127.0.0.0:8080       |"
+    echo "---------------------------------------"
     echo ""
+    echo "command untuk menjalankan filebrowser jika mati : [ filebrowser -a 0.0.0.0 -p 2222 -r / ]"
 else
     echo "Installation aborted."
 fi
