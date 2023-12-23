@@ -7,7 +7,6 @@ echo "                                                     github.com/rafia9005"
 echo " "
 read -p "Apakah kamu yakin ingin menggunakan auto setup ini? (Y/n): " answer
 
-if [ "$answer" = "Y" ] || [ "$answer" = "y" ]; then
     echo "--- wait auto setup server is running ----"
     yes "" | apt update
     yes "" | apt install neofetch htop
@@ -31,6 +30,3 @@ if [ "$answer" = "Y" ] || [ "$answer" = "y" ]; then
     echo "---------------------------------------"
     echo ""
     echo "command untuk menjalankan filebrowser jika mati : [ filebrowser -a 0.0.0.0 -p 2222 -r / ]"
-else
-    echo "Auto setup dibatalkan."
-fi
