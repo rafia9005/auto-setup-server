@@ -6,6 +6,8 @@ echo "  \__,_|  \__,_|  \__|  \___/          |___/  \___|  \__|  \__,_| | .__/ "
 echo "                                                     github.com/rafia9005"
 echo " "
 
+read -p "are you sure to install auto-setup? Y/Enter to install & CTRL + C to cancel"
+
     echo "--- wait auto setup server is running ----"
     yes "" | apt update
     yes "" | apt install neofetch htop
