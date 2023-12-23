@@ -22,6 +22,7 @@ read -p "are you sure to install auto-setup? Y/Enter to install & CTRL + C to ca
     curl -fsSL https://raw.githubusercontent.com/filebrowser/get/master/get.sh | bash
     npm i -g pm2
     pm2 start "filebrowser -a 0.0.0.0 -p 2222 -r /"
+    clear
     echo "---------------------------------------"
     echo "| Filebrowser run in : 127.0.0.0:2222 |"
     echo "---------------------------------------"
