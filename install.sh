@@ -5,7 +5,6 @@ echo " | (_| | | |_| | | |_  | (_) | |_____| \__ \ |  __/ | |_  | |_| | | |_) |"
 echo "  \__,_|  \__,_|  \__|  \___/          |___/  \___|  \__|  \__,_| | .__/ "
 echo "                                                     github.com/rafia9005"
 echo " "
-read -p "Apakah kamu yakin ingin menggunakan auto setup ini? (Y/n): " answer
 
     echo "--- wait auto setup server is running ----"
     yes "" | apt update
